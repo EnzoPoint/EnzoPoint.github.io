@@ -8,6 +8,10 @@
     text-decoration: none;
     list-style: none;
 }
+
+.cv {
+    text-align: center;
+}
 :root{
     --body-background: #ffffff;
     --banner-gradient: linear-gradient(to right, #373b44, #4286f4);
@@ -292,9 +296,7 @@ a.link i{
     letter-spacing: 3px;
     font-weight: 700;
 }
-.about .social_links{
-    padding: 45px 0 15px;
-}
+
 .about .about_content, .projects .projects_container, .veilles, .veilles_container{
     width: 75%;
 }
@@ -563,3 +565,11 @@ display: flex;
     }
 }
 
+
+.barre_custom {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    border-top: 1px solid var(--border-color);
+    padding: 20px 0;
+}

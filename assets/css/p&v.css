@@ -1139,6 +1139,13 @@ textarea:focus {
     }
 }
 
+.pasfull {
+    width: 50%;
+    align-items: center;
+    float: right;
+    display: flex;
+    }
+
 /* Animation Contact */
 
 .form-groupe:focus-within label,
@@ -1146,4 +1153,8 @@ textarea:focus {
     top: 0px;
     transform: translateY(-100%);
     color: #8b97d7;
+}
+
+.full {
+    width: 60%;
 }

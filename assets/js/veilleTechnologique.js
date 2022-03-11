@@ -20,7 +20,6 @@ client.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.co
     let feed = JSON.parse(response);
     let detailSimple; 
     let limite = 0;
-    let html = [];
     let data = document.getElementById('dataTechnologique');
     feed.items.forEach(function(entry) {
         let link = entry.link;
@@ -30,12 +29,10 @@ client.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.co
         let img = entry.thumbnail;
         if(limite <= 2) {
             detailSimple = "<div class='item vague1'><div class='cont-img-port'><img src='" + img + "' alt='img portfolio'> </div><h3>" + titre + "</h3><p> Autheur :  " + author + " - " + dataPub + "</p><a target='_blank' href=" + link + " class='btn-projets'>Découvrez l'article</a></div>";
-            html.push(detailSimple)
          } else {
-            detailSimple = "<div class='item vague2'><div class='cont-img-port'><img src='" + img + "' alt='img portfolio'> </div><h3>" + titre + "</h3><p>" + author + "Publié le : " + dataPub + "</p><a target='_blank' href=" + link + " class='btn-projets'>Découvrez l'article'</a></div>";
-            html.push(detailSimple)
+            detailSimple = "<div class='item vague2'><div class='cont-img-port'><img src='" + img + "' alt='img portfolio'> </div><h3>" + titre + "</h3><p>" + author + "Publié le : " + dataPub + "</p><a target='_blank' href=" + link + " class='btn-projets'>Découvrez l'article</a></div>";
         }
         limite += 1;
+        data.insertAdjacentHTML("beforeend", detailSimple)
     })
-    data.insertAdjacentHTML("beforeend", html)
 });
