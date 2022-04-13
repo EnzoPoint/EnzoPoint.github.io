@@ -5,6 +5,11 @@ $(document.body).ready(function() {
 		$('.inner').toggleClass('open');
 	});
 
+
+		if (window.location.href.indexOf("#navigation") > -1) {
+			$('.inner').toggleClass('open');
+		}
+
 	/// test 
 	/* test */
 	//- test 
